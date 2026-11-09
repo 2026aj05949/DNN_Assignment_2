@@ -1,0 +1,47 @@
+problem,model,seed,seq_len,test_acc,macro_f1,test_mse,params,sec_per_epoch,val_loss_nats,bits_per_char,notes
+P1_HAR,RNN,0,128,73.43,0.7209,,5190,0.475,,,HAR benchmark run 0
+P1_HAR,RNN,1,128,58.87,0.5759,,5190,0.23,,,HAR benchmark run 1
+P1_HAR,RNN,2,128,69.12,0.6803,,5190,0.276,,,HAR benchmark run 2
+P1_HAR,LSTM,0,128,87.89,0.8791,,19590,0.252,,,HAR benchmark run 0
+P1_HAR,LSTM,1,128,88.23,0.8822,,19590,0.294,,,HAR benchmark run 1
+P1_HAR,LSTM,2,128,84.8,0.8458,,19590,0.263,,,HAR benchmark run 2
+P1_HAR,GRU,0,128,90.26,0.9018,,14790,0.27,,,HAR benchmark run 0
+P1_HAR,GRU,1,128,89.18,0.8922,,14790,0.26,,,HAR benchmark run 1
+P1_HAR,GRU,2,128,88.23,0.8822,,14790,0.276,,,HAR benchmark run 2
+P1_Adding,RNN,0,50,,,0.17908,4417,0.395,,,Solved: False
+P1_Adding,RNN,1,50,,,0.17404,4417,0.375,,,Solved: False
+P1_Adding,RNN,2,50,,,0.17384,4417,0.401,,,Solved: False
+P1_Adding,LSTM,0,50,,,0.12753,17473,0.458,,,Solved: False
+P1_Adding,LSTM,1,50,,,0.1742,17473,0.412,,,Solved: False
+P1_Adding,LSTM,2,50,,,0.16918,17473,0.447,,,Solved: False
+P1_Adding,GRU,0,50,,,0.00437,13121,0.426,,,Solved: True
+P1_Adding,GRU,1,50,,,0.00455,13121,0.405,,,Solved: True
+P1_Adding,GRU,2,50,,,0.00786,13121,0.425,,,Solved: True
+P1_Adding,RNN,0,100,,,0.17226,4417,0.417,,,Solved: False
+P1_Adding,RNN,1,100,,,0.1702,4417,0.381,,,Solved: False
+P1_Adding,RNN,2,100,,,0.16919,4417,0.383,,,Solved: False
+P1_Adding,LSTM,0,100,,,0.1705,17473,0.473,,,Solved: False
+P1_Adding,LSTM,1,100,,,0.17088,17473,0.669,,,Solved: False
+P1_Adding,LSTM,2,100,,,0.17246,17473,0.482,,,Solved: False
+P1_Adding,GRU,0,100,,,0.00559,13121,0.402,,,Solved: True
+P1_Adding,GRU,1,100,,,0.005,13121,0.401,,,Solved: True
+P1_Adding,GRU,2,100,,,0.0079,13121,0.467,,,Solved: True
+P1_Adding,RNN,0,200,,,0.17477,4417,0.393,,,Solved: False
+P1_Adding,RNN,1,200,,,0.16944,4417,0.399,,,Solved: False
+P1_Adding,RNN,2,200,,,0.1682,4417,0.461,,,Solved: False
+P1_Adding,LSTM,0,200,,,0.16787,17473,0.434,,,Solved: False
+P1_Adding,LSTM,1,200,,,0.16933,17473,0.426,,,Solved: False
+P1_Adding,LSTM,2,200,,,0.16806,17473,0.496,,,Solved: False
+P1_Adding,GRU,0,200,,,0.05387,13121,0.407,,,Solved: False
+P1_Adding,GRU,1,200,,,0.02714,13121,0.416,,,Solved: True
+P1_Adding,GRU,2,200,,,0.02572,13121,0.478,,,Solved: True
+P1_Adding,RNN,0,400,,,0.15753,4417,0.538,,,Solved: False
+P1_Adding,RNN,1,400,,,0.15338,4417,0.447,,,Solved: False
+P1_Adding,RNN,2,400,,,0.15541,4417,0.42,,,Solved: False
+P1_Adding,LSTM,0,400,,,0.15327,17473,0.441,,,Solved: False
+P1_Adding,LSTM,1,400,,,0.15283,17473,0.512,,,Solved: False
+P1_Adding,LSTM,2,400,,,0.15301,17473,0.445,,,Solved: False
+P1_Adding,GRU,0,400,,,0.15702,13121,0.48,,,Solved: False
+P1_Adding,GRU,1,400,,,0.15325,13121,0.599,,,Solved: False
+P1_Adding,GRU,2,400,,,0.15153,13121,0.786,,,Solved: False
+P2_TaskB,CausalTransformer,0,128,,,,810049,,1.894,2.7325,Language model training completed
