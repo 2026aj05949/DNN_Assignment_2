@@ -4,8 +4,6 @@
 **Student Name:** Umesha M S  
 **Student ID:** 2026AJ05949
 
-**GitHub Repository:**  
-https://github.com/2026aj05949/DNN_Assignment_2
 
 ---
 
