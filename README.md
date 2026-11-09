@@ -4,7 +4,7 @@
 **Student Name:** Umesha M S  
 **Student ID:** 2026AJ05949
 
-GitHub Repository:  
+**GitHub Repository:**  
 https://github.com/2026aj05949/DNN_Assignment_2
 
 ---
@@ -32,6 +32,7 @@ The project is divided into two sections:
 - Multi-Head Attention
 - Transformer Encoder
 - Positional Encoding
+- HAR Transformer Classification
 - Character-Level Language Modeling
 - Attention Visualization
 - Head Ablation
@@ -81,6 +82,7 @@ DNN_Assignment_2/
         ├── attention_heatmap_head2.png
         ├── positional_encoding_ablation.png
         ├── heads_ablation.png
+        ├── no_mask_result.png
         ├── transformer_learning_curve.png
         ├── context_time.png
         └── context_memory.png
@@ -136,17 +138,13 @@ Components:
 - Update Gate
 - Candidate Hidden State
 
-All implementations were verified against the equivalent PyTorch implementations using unit tests.
+All implementations were verified against equivalent PyTorch implementations using unit tests.
 
 ---
 
 ## Human Activity Recognition (HAR)
 
-### Dataset
-
-UCI HAR Dataset
-
-Dataset Statistics:
+### Dataset Statistics
 
 ```text
 Training Samples : 7352
@@ -156,7 +154,7 @@ Features         : 9
 Classes          : 6
 ```
 
-Activities:
+### Activities
 
 - Walking
 - Walking Upstairs
@@ -171,9 +169,9 @@ Activities:
 - LSTM
 - GRU
 
-### Best Result
+### Best HAR Result
 
-| Model | Accuracy | Macro F1 |
+| Model | Accuracy | Macro-F1 |
 |---------|---------|---------|
 | GRU | 90.26% | 0.9018 |
 
@@ -196,17 +194,17 @@ Models compared:
 - LSTM
 - GRU
 
-Metric:
+Evaluation metric:
 
 ```text
 Mean Squared Error (MSE)
 ```
 
-Observations:
+### Key Observations
 
-- GRU achieved the lowest MSE for shorter sequences.
-- Long-range dependency learning becomes more difficult as sequence length increases.
-- Performance degrades significantly at T=400.
+- GRU achieved the lowest MSE for shorter sequence lengths.
+- Long-term dependency learning becomes harder as sequence length increases.
+- Performance degradation is visible at T = 400 for all architectures.
 
 ---
 
@@ -221,13 +219,13 @@ Gradient norms were analyzed across timesteps for:
 Results show:
 
 - Vanilla RNN suffers from vanishing gradients.
-- LSTM and GRU maintain stronger gradient flow through time.
+- LSTM and GRU preserve gradient information over longer time horizons.
 
 ---
 
 ## Hidden-Size Sweep
 
-Hidden dimensions evaluated:
+Evaluated hidden sizes:
 
 ```text
 16
@@ -236,29 +234,29 @@ Hidden dimensions evaluated:
 128
 ```
 
-Results indicate:
+Observations:
 
-- Accuracy improves with larger hidden sizes.
-- GRU consistently outperforms LSTM across hidden dimensions.
-- Performance gains diminish beyond hidden size 64.
+- Accuracy improves with hidden size.
+- GRU consistently performs better than LSTM.
+- Gains beyond hidden size 64 are relatively small.
 
 ---
 
 ## Student-Specific Ablation
 
-Student ID:
+### Student ID
 
 ```text
 2026AJ05949
 ```
 
-Last Digit:
+### Last Digit
 
 ```text
 9
 ```
 
-Required Experiment:
+### Required Experiment
 
 ```text
 Forget Gate Bias = 0
@@ -266,19 +264,19 @@ vs
 Forget Gate Bias = 1
 ```
 
-Sequence Length:
+at:
 
 ```text
 T = 200
 ```
 
-Result:
+### Result
 
 A positive forget-gate bias significantly improves memory retention and reduces test MSE.
 
 ---
 
-# Problem 2: Transformer
+# Problem 2: Transformers
 
 ## Scaled Dot-Product Attention
 
@@ -300,7 +298,7 @@ torch.nn.functional.scaled_dot_product_attention
 
 ## Multi-Head Attention
 
-Implemented:
+Implemented components:
 
 - Query Projection (WQ)
 - Key Projection (WK)
@@ -311,41 +309,59 @@ Configuration:
 
 ```text
 d_model = 128
-Heads = 4
+num_heads = 4
 ```
-
----
-
-## Positional Encoding
-
-Implemented:
-
-### Sinusoidal Positional Encoding
-
-Compared against:
-
-- No Positional Encoding
-- Learned Positional Encoding
-
-Result:
-
-Sinusoidal positional encoding achieved the best overall performance.
 
 ---
 
 ## Transformer Encoder
 
-The Transformer encoder contains:
+Implemented:
 
 - Multi-Head Attention
 - Residual Connections
 - Layer Normalization
-- Feed Forward Network
+- Position-Wise Feed Forward Network
 - Dropout
+
+Verified parameter formula:
+
+```text
+4d² + 2(d × dff)
+```
+
+For:
+
+```text
+d = 128
+dff = 512
+```
+
+Result:
+
+```text
+196,608 weights
+```
 
 ---
 
-# Character-Level Language Model
+## HAR Transformer Classification
+
+Transformer-based HAR classifier evaluated with:
+
+- No Positional Encoding
+- Sinusoidal Positional Encoding
+- Learned Positional Encoding
+
+Performance comparison is presented in:
+
+```text
+positional_encoding_ablation.png
+```
+
+---
+
+## Character-Level Language Model
 
 Dataset:
 
@@ -353,13 +369,13 @@ Dataset:
 Tiny Shakespeare
 ```
 
-Architecture:
+Model Configuration:
 
 ```text
-Context Length = 128
-Embedding Dimension = 128
-Attention Heads = 4
-Transformer Layers = 4
+Context Length    = 128
+Embedding Size    = 128
+Attention Heads   = 4
+Transformer Layers= 4
 ```
 
 ---
@@ -378,7 +394,7 @@ Bits Per Character:
 2.7325
 ```
 
-Generated samples are stored in:
+Generated text samples are stored in:
 
 ```text
 problem2/generated_samples.txt
@@ -398,9 +414,9 @@ Temperatures evaluated:
 
 Observations:
 
-- 0.2 → More deterministic and repetitive text
+- 0.2 → Deterministic and repetitive output
 - 0.8 → Best balance between coherence and diversity
-- 1.5 → Highest diversity but lower readability
+- 1.5 → High diversity with reduced readability
 
 ---
 
@@ -422,6 +438,7 @@ Observations:
 - attention_heatmap_head2.png
 - positional_encoding_ablation.png
 - heads_ablation.png
+- no_mask_result.png
 - transformer_learning_curve.png
 - context_time.png
 - context_memory.png
@@ -430,7 +447,7 @@ Observations:
 
 # Results
 
-All experiment outputs are stored in:
+All experimental results are stored in:
 
 ```text
 results.csv
