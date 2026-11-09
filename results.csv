@@ -44,12 +44,12 @@ P1_Adding,LSTM,2,400,,,0.15301,17473,0.445,,,Solved: False
 P1_Adding,GRU,0,400,,,0.15702,13121,0.48,,,Solved: False
 P1_Adding,GRU,1,400,,,0.15325,13121,0.599,,,Solved: False
 P1_Adding,GRU,2,400,,,0.15153,13121,0.786,,,Solved: False
-P2_TaskA_HAR,Transformer_none,0,128,90.5,0.9036,,200454,0.681,,,HAR Transformer Positional Encoding: none
-P2_TaskA_HAR,Transformer_none,1,128,86.9,0.8677,,200454,0.657,,,HAR Transformer Positional Encoding: none
-P2_TaskA_HAR,Transformer_none,2,128,86.46,0.8637,,200454,0.678,,,HAR Transformer Positional Encoding: none
-P2_TaskA_HAR,Transformer_sinusoidal,0,128,86.16,0.8592,,200454,0.667,,,HAR Transformer Positional Encoding: sinusoidal
-P2_TaskA_HAR,Transformer_sinusoidal,1,128,88.19,0.8803,,200454,0.678,,,HAR Transformer Positional Encoding: sinusoidal
-P2_TaskA_HAR,Transformer_sinusoidal,2,128,87.51,0.8738,,200454,0.692,,,HAR Transformer Positional Encoding: sinusoidal
-P2_TaskA_HAR,Transformer_learned,0,128,88.6,0.8845,,226054,0.685,,,HAR Transformer Positional Encoding: learned
-P2_TaskA_HAR,Transformer_learned,1,128,87.21,0.8702,,226054,0.689,,,HAR Transformer Positional Encoding: learned
-P2_TaskA_HAR,Transformer_learned,2,128,86.77,0.8669,,226054,0.704,,,HAR Transformer Positional Encoding: learned
+P2_TaskA_HAR,Transformer_none,0,128,90.5,0.9036,,200454,0.718,,,HAR Transformer Positional Encoding: none
+P2_TaskA_HAR,Transformer_none,1,128,86.9,0.8677,,200454,0.644,,,HAR Transformer Positional Encoding: none
+P2_TaskA_HAR,Transformer_none,2,128,86.46,0.8637,,200454,0.665,,,HAR Transformer Positional Encoding: none
+P2_TaskA_HAR,Transformer_sinusoidal,0,128,86.16,0.8592,,200454,0.655,,,HAR Transformer Positional Encoding: sinusoidal
+P2_TaskA_HAR,Transformer_sinusoidal,1,128,88.19,0.8803,,200454,0.667,,,HAR Transformer Positional Encoding: sinusoidal
+P2_TaskA_HAR,Transformer_sinusoidal,2,128,87.51,0.8738,,200454,0.683,,,HAR Transformer Positional Encoding: sinusoidal
+P2_TaskA_HAR,Transformer_learned,0,128,88.6,0.8845,,226054,0.675,,,HAR Transformer Positional Encoding: learned
+P2_TaskA_HAR,Transformer_learned,1,128,87.21,0.8702,,226054,0.676,,,HAR Transformer Positional Encoding: learned
+P2_TaskA_HAR,Transformer_learned,2,128,86.77,0.8669,,226054,0.696,,,HAR Transformer Positional Encoding: learned
